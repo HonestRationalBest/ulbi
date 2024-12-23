@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+
+  a {
+    color: #1a73e8;
+  }
+
+  button {
+    background-color: #f1f3f4;
+    color: #000000;
+    border: 1px solid #dadce0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #e8eaed;
+  }
+}
+
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+
+  a {
+    color: #bb86fc;
+  }
+
+  button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #444444;
+  }
+}
