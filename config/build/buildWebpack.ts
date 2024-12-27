@@ -11,32 +11,16 @@ export function buildWebpack(options: BuildOptions): Configuration {
     entry: options.paths.entry,
     output: {
       filename: "[name].[contenthash].js",
-      // chunkFilename: "[name].[contenthash].chunk.js",
       path: options.paths.output,
       publicPath: "/",
       clean: true,
     },
-    resolve: buildResolvers(),
+    resolve: buildResolvers(options),
     module: {
       rules: buildLoaders(options),
     },
     plugins: buildPlugins(options),
     devServer: buildDevServer(options),
     devtool: !options.isDev ? "source-map" : "eval-source-map",
-    // optimization: {
-    //   splitChunks: {
-    //     chunks: "all",
-    //     cacheGroups: {
-    //       vendors: {
-    //         test: /[\\/]node_modules[\\/]/,
-    //         name: "vendors",
-    //         chunks: "all",
-    //       },
-    //     },
-    //   },
-    //   runtimeChunk: {
-    //     name: "runtime",
-    //   },
-    // },
   };
 }

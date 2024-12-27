@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useTheme } from "../../theme/useTheme";
+import { useTheme } from "@/app/providers/ThemeProvider/lib/useTheme";
 
 export const Navigation: React.FC = () => {
   const { theme, toggleTheme } = useTheme();

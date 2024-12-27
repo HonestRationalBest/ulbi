@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "./ThemeContext";
+import { ThemeContext } from "../ui/ThemeContext";
 
 interface useThemeType {
   theme: "light" | "dark";
