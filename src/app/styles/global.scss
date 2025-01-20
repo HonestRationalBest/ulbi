@@ -48,3 +48,11 @@ body {
     background-color: #444444;
   }
 }
+
+.content {
+  display: flex;
+}
+
+.page {
+  flex-grow: 1;
+}

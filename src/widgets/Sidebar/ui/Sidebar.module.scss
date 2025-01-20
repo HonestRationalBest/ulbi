@@ -1,0 +1,80 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--sidebar-bg, #333);
+    color: var(--sidebar-color, #fff);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease, background-color 0.3s ease;
+    
+    &.collapsed {
+      width: 60px;
+    }
+  }
+  
+  .collapseButton {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  .themeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+  
+    .menuItem {
+      margin: 10px 0;
+  
+      a {
+        color: inherit;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: var(--menu-hover-color, #00bcd4);
+        }
+      }
+    }
+  }
+  
+  body.light {
+    --sidebar-bg: #ffffff;
+    --sidebar-color: #000000;
+    --menu-hover-color: #1a73e8;
+  }
+  
+  body.dark {
+    --sidebar-bg: #121212;
+    --sidebar-color: #ffffff;
+    --menu-hover-color: #bb86fc;
+  }
+  

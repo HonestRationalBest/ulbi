@@ -1,20 +1,22 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AboutPage } from "@/pages/About";
-import { Navigation } from "@/shared/Navigation/Navigation";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Navigation } from "@/widgets/Navigation";
 import "./styles/global.scss";
-import { MainPage } from "@/pages/Main";
+import { AppRouter } from "./providers/router";
+import { Sidebar } from "@/widgets/Sidebar";
 
 const App: React.FC = () => {
   return (
     <Router>
       <Navigation />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-      </Suspense>
+      <div className="content">
+        <Sidebar />
+        <div className="page">
+          <Suspense fallback={<div>Loading...</div>}>
+            <AppRouter />
+          </Suspense>
+        </div>
+      </div>
     </Router>
   );
 };
