@@ -13,3 +13,5 @@ declare module "*.png" {
   const content: string;
   export default content;
 }
+
+declare const __IS__DEV: boolean;
