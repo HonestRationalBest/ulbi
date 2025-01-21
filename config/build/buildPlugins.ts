@@ -1,9 +1,14 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import { DefinePlugin, ProgressPlugin, WebpackPluginInstance } from "webpack";
+import {
+  DefinePlugin,
+  HotModuleReplacementPlugin,
+  ProgressPlugin,
+  WebpackPluginInstance,
+} from "webpack";
 import { BuildOptions } from "./types";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import CopyWebpackPlugin from "copy-webpack-plugin";
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export function buildPlugins({
   paths,
@@ -29,6 +34,7 @@ export function buildPlugins({
         },
       ],
     }),
-    // new BundleAnalyzerPlugin(),
+    new HotModuleReplacementPlugin(),
+    ...(isDev ? [new ReactRefreshWebpackPlugin()] : []),
   ];
 }

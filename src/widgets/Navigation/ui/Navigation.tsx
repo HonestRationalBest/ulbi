@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
-import ToggleThemeButton from "@/widgets/ToglleThemeButton/ui/ToggleThemeButton";
+import { useTranslation } from "react-i18next";
 
 export const Navigation: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <nav>
       <ul>
         <li>
-          <Link to="/">Main</Link>
+          <Link to="/">{t("navigation.main")}</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">{t("navigation.about")}</Link>
         </li>
       </ul>
     </nav>

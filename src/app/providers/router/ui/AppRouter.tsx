@@ -5,7 +5,7 @@ export const AppRouter = () => {
   return (
     <Routes>
       {routes.map(({ element, path }) => (
-        <Route path={path} element={element} />
+        <Route path={path} element={element} key={path} />
       ))}
     </Routes>
   );

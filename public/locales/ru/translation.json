@@ -1,5 +1,13 @@
 {
   "mainPage": {
     "title": "Главная страница"
+  },
+  "languageSwitcher": {
+    "english": "Английский",
+    "russian": "Русский"
+  },
+  "navigation": {
+    "main": "Главная",
+    "about": "О нас"
   }
 }
