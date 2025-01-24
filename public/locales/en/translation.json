@@ -6,8 +6,16 @@
     "english": "English",
     "russian": "Русский"
   },
+  "notFoundPage": {
+    "title": "Page not found"
+  },
   "navigation": {
     "main": "Main",
     "about": "About"
+  },
+  "errorBoundary": {
+    "title": "Something went wrong",
+    "description": "We apologize for the inconvenience. Please try refreshing the page or contact support if the issue persists.",
+    "reloadButton": "Refresh Page"
   }
 }

@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import "./config/i18n/i18n";
+import ErrorBoundary from "./providers/ErrorBoundary/ErrorBoundaty";
+import { ErrorPage } from "@/pages/Error";
 
 const container = document.getElementById("root");
 if (!container) throw new Error("Root container not found");
@@ -10,8 +12,10 @@ if (!container) throw new Error("Root container not found");
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <ErrorBoundary fallback={<ErrorPage />}>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </ErrorBoundary>
   </React.StrictMode>
 );
