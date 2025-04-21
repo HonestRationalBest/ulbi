@@ -11,8 +11,8 @@ export const Sidebar: FC = () => {
   };
 
   return (
-    <nav className={`${styles.sidebar} ${isCollapsed ? styles.collapsed : ""}`}>
-      <button onClick={toggleCollapse} className={styles.collapseButton}>
+    <nav className={`${styles.sidebar} ${isCollapsed ? styles.collapsed : ""}`} data-testid="sidebar">
+      <button onClick={toggleCollapse} className={styles.collapseButton} data-testid="sidebar-button">
         {isCollapsed ? ">" : "<"}
       </button>
       <ToggleThemeButton />
