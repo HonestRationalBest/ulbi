@@ -39,4 +39,4 @@ jobs:
       - name: Publish to Chromatic
         run: npm run chromatic
         env:
-          CHROMATIC_PROJECT_TOKEN: chpt_88080e02a0c3fe2
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
