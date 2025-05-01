@@ -20,7 +20,8 @@ export function buildWebpack(options: BuildOptions): Configuration {
       rules: buildLoaders(options),
     },
     plugins: buildPlugins(options),
-    devServer: buildDevServer(options),
+    devServer: options.isDev ? buildDevServer(options) : undefined,
+    watch: options.isDev,
     devtool: !options.isDev ? "source-map" : "eval-source-map",
   };
 }
