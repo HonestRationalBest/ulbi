@@ -37,6 +37,6 @@ export function buildPlugins({
     }),
     new HotModuleReplacementPlugin(),
     ...(isDev ? [new ReactRefreshWebpackPlugin()] : []),
-    new BundleAnalyzerPlugin(),
+    ...(isDev ? [new BundleAnalyzerPlugin()] : []),
   ];
 }
