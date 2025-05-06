@@ -3,7 +3,7 @@ import { useTheme } from "@/app/providers/ThemeProvider";
 import ThemeDark from "@/shared/assets/theme-dark.svg";
 import ThemeLight from "@/shared/assets/theme-light.svg";
 
-const ToggleThemeButton = () => {
+export const ToggleThemeButton = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -12,5 +12,3 @@ const ToggleThemeButton = () => {
     </button>
   );
 };
-
-export default ToggleThemeButton;

@@ -1,0 +1,21 @@
+import { ReactNode } from "react";
+import * as styles from "./Modal.module.scss";
+
+interface ModalProps {
+  children: ReactNode;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const Modal = ({ children, isOpen, onClose }: ModalProps) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className={styles.overlay} onClick={onClose}>
+      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+        {children}
+        <button onClick={onClose}>X</button>
+      </div>
+    </div>
+  );
+};

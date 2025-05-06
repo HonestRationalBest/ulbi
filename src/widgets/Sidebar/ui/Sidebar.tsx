@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
 import * as styles from "./Sidebar.module.scss";
-import ToggleThemeButton from "@/widgets/ToglleThemeButton/ui/ToggleThemeButton";
-import { LanguageSwitcher } from "@/widgets/LanguageSwitcher";
+import { LanguageSwitcher, ToggleThemeButton } from "@/shared/ui";
 
 export const Sidebar: FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -11,8 +10,15 @@ export const Sidebar: FC = () => {
   };
 
   return (
-    <nav className={`${styles.sidebar} ${isCollapsed ? styles.collapsed : ""}`} data-testid="sidebar">
-      <button onClick={toggleCollapse} className={styles.collapseButton} data-testid="sidebar-button">
+    <nav
+      className={`${styles.sidebar} ${isCollapsed ? styles.collapsed : ""}`}
+      data-testid="sidebar"
+    >
+      <button
+        onClick={toggleCollapse}
+        className={styles.collapseButton}
+        data-testid="sidebar-button"
+      >
         {isCollapsed ? ">" : "<"}
       </button>
       <ToggleThemeButton />

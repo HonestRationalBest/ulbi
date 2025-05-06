@@ -11,7 +11,8 @@
   },
   "navigation": {
     "main": "Главная",
-    "about": "О нас"
+    "about": "О нас",
+    "login": "войти"
   },
   "errorBoundary": {
     "title": "Что-то пошло не так",

@@ -4,14 +4,15 @@
   },
   "languageSwitcher": {
     "english": "English",
-    "russian": "Русский"
+    "russian": "Russian"
   },
   "notFoundPage": {
     "title": "Page not found"
   },
   "navigation": {
     "main": "Main",
-    "about": "About"
+    "about": "About",
+    "login": "log in"
   },
   "errorBoundary": {
     "title": "Something went wrong",
