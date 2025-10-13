@@ -18,13 +18,4 @@ describe("Sidebar component", () => {
     fireEvent.click(button);
     expect(button).toHaveTextContent("<");
   });
-
-  // it("applies collapsed class when collapsed", () => {
-  //   render(<Sidebar />);
-  //   const sidebar = screen.getByTestId("sidebar");
-  //   const toggleButton = screen.getByTestId("sidebar-button");
-
-  //   fireEvent.click(toggleButton);
-  //   expect(sidebar.className).toHaveClass("collapsed");
-  // });
 });
