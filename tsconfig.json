@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESNext",
+    "module": "ESNext",
     "jsx": "react-jsx",
+    "moduleResolution": "Node",
     "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
+    "types": ["vite/client", "jest", "@testing-library/jest-dom"],
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src", "webpack.config.ts", "./setupTests.ts"]
+  "include": ["src", "setupTests.ts", "src/types"]
 }

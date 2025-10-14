@@ -15,7 +15,7 @@ const config: Config = {
   ],
   moduleNameMapper: {
     "\\.(css|scss)$": "identity-obj-proxy",
-    "\\.svg$": "<rootDir>/jestEmptyComponent.tsx",
+    "\\.svg(\\?react)?$": "<rootDir>/jestEmptyComponent.tsx",
     "^@/(.*)$": "<rootDir>/src/$1",
   },
   transform: {
