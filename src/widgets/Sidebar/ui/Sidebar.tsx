@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import * as styles from "./Sidebar.module.scss";
+import styles from "./Sidebar.module.scss";
 import { LanguageSwitcher, ToggleThemeButton } from "@/shared/ui";
 
 export const Sidebar: FC = () => {

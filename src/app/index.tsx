@@ -1,4 +1,4 @@
-import React from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import { ThemeProvider } from "./providers/ThemeProvider";
@@ -11,11 +11,11 @@ if (!container) throw new Error("Root container not found");
 
 const root = createRoot(container);
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <ErrorBoundary fallback={<ErrorPage />}>
       <ThemeProvider>
         <App />
       </ThemeProvider>
     </ErrorBoundary>
-  </React.StrictMode>
+  </StrictMode>
 );
